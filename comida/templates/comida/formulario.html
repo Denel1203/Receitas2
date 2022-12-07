@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Título da página</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{% static 'css/stylo2.css' %}">
+    
+  </head>
+  <body>
+  
+    <form class="formulario" method="POST">
+      {% csrf_token %}
+      
+      <input type="text" class="campo" placeholder= "Nome" {{form.Name}} </>
+      <input type="text" class="campo" placeholder= "Nome Receita" {{form.Nome_Receita}}</>
+      <textarea class="campo" placeholder= "Ingredientes" {{form.Ingredientes}}></textarea>
+      <textarea class="campo" placeholder= "Instrucoes" {{form.Instrucoes}}></textarea>
+      <textarea class="campo"placeholder= "Notas" {{form.Notas}}></textarea>
+      <button type="submit" class="botao"> Enviar </button>
+             
+ </form>
+  
+  </body>
+</html>

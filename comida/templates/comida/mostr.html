@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>site de receitas</title>
+    <link rel="stylesheet" href="{% static 'css/stylo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Footer-Dark-icons.css' %}">
+</head>
+
+<body>
+    
+    <h1 class="text-center"><br><strong><span style="color: rgb(33, 33, 33);">{{amostrar.Nome_Receita}}</span></strong><br><br></h1>
+    <div class="container text-center"><img src="{% static 'imagens/receita.jpg' %}"></div>
+    <p class="text-center"><br><strong><span style="color: rgb(33, 33, 33);">INGREDIENTES</span></strong><br><br><span style="color: rgb(51, 51, 51);">{{amostrar.Ingredientes}}</span><br><br></p>
+    <p class="text-center"><br><strong><span style="color: rgb(33, 33, 33);">INSTRUÇÕES</span></strong><br><br><span style="color: rgb(51, 51, 51);">{{amostrar.Instrucoes}}</span><br><br></p>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bold-and-bright.js"></script>
+    
+    <p class="text-center text-muted card-text mb-4"><span style="color: rgb(51, 51, 51);">{{dado.Notas}}</span><br></p><button class="btn btn-primary shadow" type="button" style="margin-right: 82px;margin-left: 92px;"><a href="http://127.0.0.1:8000/coment/">Comentario</a></button>
+    
+
+    
+</body>
+
+</html>

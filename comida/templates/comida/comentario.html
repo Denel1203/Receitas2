@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" style="background: var(--bs-white);">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Home</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'css/stylo.css' %}">
+    <link rel="stylesheet" href="{% static 'css/Footer-Dark-icons.css' %}">
+    <link rel="stylesheet" href="assets/css/Footer-Dark-icons.css">
+</head>
+
+<body>
+    <section class="py-4 py-xl-5">
+        
+    </section>
+    <section class="py-5 mt-5" style="color: rgb(25,24,24);background: var(--bs-green);">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 col-xxl-4 text-center mx-auto" style="background: var(--bs-white);border-radius: 24px;"><h2 class="fw-bold" style="border-top-left-radius: -110px;padding-top: 10px;">Comentarios</h2></div>
+            </div>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 d-sm-flex justify-content-sm-center">
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Com certeza minha buchada de bode é a melhor receita e digna de ser a receita de semana&nbsp;</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{%static 'imagens/avatar1.jpg'%}">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Mariana</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Toda as receitas estão de parabéns. Mas a receita de Buchada de Bode é sensacional</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{%static 'imagens/avatar3.jpg'%}">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Javier</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">Fiz a sobremesa de bolo estava muito boa e a família adorou.Tudo de bom</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{%static 'imagens/avatar5.jpg'%}">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">Erika</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% for comen in com %}
+                <div class="col mb-4">
+                    <div class="d-flex flex-column align-items-center align-items-sm-start">
+                        <p class="bg-light border rounded border-light p-4">{{comen.comentario}}</p>
+                        <div class="d-flex"><img class="rounded-circle flex-shrink-0 me-3 fit-cover" width="50" height="50" src="{% static 'imagens/facebookfotoperfil.jpg' %}">
+                            <div>
+                                <p class="fw-bold text-primary mb-0">{{comen.Nome}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+           
+    
+</body>
+
+</html>
